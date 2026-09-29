@@ -1,0 +1,552 @@
+/* =========================================
+   SKILLMATCH - APP STYLES
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.skillmatch-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.skillmatch-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.header p {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: #64748b;
+}
+
+/* =========================================
+   STUDENT SUMMARY
+========================================= */
+
+.student-summary {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  padding: 18px 22px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.student-summary h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.student-summary p {
+  margin: 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* =========================================
+   SEARCH BOX
+========================================= */
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.search-box input {
+  width: 320px;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.search-box button {
+  height: 48px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   LOADING / ERROR
+========================================= */
+
+.loading,
+.error {
+  text-align: center;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+/* =========================================
+   JOB GRID
+========================================= */
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* =========================================
+   JOB CARD
+========================================= */
+
+.job-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.job-title {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.role-id {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =========================================
+   MATCH BADGE
+========================================= */
+
+.match-badge {
+  min-width: 80px;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================
+   MATCH INFO
+========================================= */
+
+.match-info {
+  margin-bottom: 20px;
+}
+
+.match-info strong {
+  font-size: 16px;
+  color: #374151;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 9px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  margin: 20px 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.matched-skill {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.missing-skill {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* =========================================
+   AVAILABLE JOBS
+========================================= */
+
+.jobs-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.jobs-list li {
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 15px;
+}
+
+/* =========================================
+   NO SKILLS
+========================================= */
+
+.no-skills {
+  color: #9ca3af;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-results {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 35px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.no-results h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.no-results p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .skillmatch-container {
+    padding: 25px 15px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card {
+    padding: 20px;
+  }
+
+  .job-title {
+    font-size: 21px;
+  }
+
+  .student-summary {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .skillmatch-container {
+    padding: 20px 12px;
+  }
+
+  .header {
+    margin-bottom: 25px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .job-header {
+    flex-direction: column;
+  }
+
+  .match-badge {
+    align-self: flex-start;
+  }
+
+  .job-card {
+    padding: 18px;
+  }
+
+  .skill {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .student-summary {
+    padding: 16px;
+  }
+
+  .student-summary h2 {
+    font-size: 19px;
+  }
+
+  .student-summary p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+
+  .skillmatch-container {
+    padding: 20px 12px;
+  }
+
+  .header {
+    margin-bottom: 25px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .job-header {
+    flex-direction: column;
+  }
+
+  .match-badge {
+    align-self: flex-start;
+  }
+
+  .job-card {
+    padding: 18px;
+  }
+
+  .skill {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  .student-summary {
+    padding: 16px;
+  }
+
+  .student-summary h2 {
+    font-size: 19px;
+  }
+
+  .student-summary p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   TOP MATCH
+========================================= */
+
+.top-match {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* =========================================
+   TOP MATCH
+========================================= */
+
+.top-match {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.match-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.match-badge small {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.8;
+}
